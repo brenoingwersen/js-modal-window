@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: arial;
+}
+
+body {
+  height: 100vh; /*vh == 1/100 of viewpoint height, so 1vh of a browser screensize of 900px is 9px*/
+  background: linear-gradient(to top left, #e66465, #9198e5);
+  font-family: Arial;
+  display: block;
+  overflow: auto;
+}
+
+.modal-button {
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: x-large;
+  line-height: 150%; /*150% of the font-size height*/
+  width: 8em;
+  border: none;
+  background-color: #e7e7e7;
+  color: #444;
+  margin: 1em;
+  padding: 0.2em;
+}
+
+.modal-button:hover {
+  color: white;
+  background-color: #444;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.description {
+  flex-direction: column;
+  background-color: #e7e7e7;
+  color: #444;
+  margin: 2vh 10vw;
+  padding: 0.5em 1.5em 1.5em;
+  display: none; /*Change to 'flex' to make it visible*/
+}
+
+/* .buttons {
+  display: none;
+} */
+
+.description .close-window {
+  align-self: flex-end;
+  border: none;
+  background-color: #e7e7e7;
+  color: #444;
+  font-size: xx-large;
+  margin: none;
+}
+
+#close-button:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.description .heading {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 690px) {
+  .buttons {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+
+  .description {
+    margin: 4vh 5vw;
+    align-self: center;
+  }
+}
