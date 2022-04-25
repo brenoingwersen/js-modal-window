@@ -28,3 +28,13 @@ for (let i = 0; i < modalButtons.length; i++) {
 
 // Closing the modal window
 document.querySelector('.close-window').addEventListener('click', closeModal);
+
+// Closing using the Esc key press
+document.addEventListener('keydown', function (e) {
+  if (
+    e.key == 'Escape' &&
+    document.querySelector('.description').style.display == 'flex'
+  ) {
+    closeModal();
+  }
+});
